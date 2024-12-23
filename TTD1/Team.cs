@@ -20,8 +20,7 @@ namespace TeamManagement
 
         public void RemoveTeamMember(int memberId)
         {
-            // Помилка: неправильна умова пошуку
-            var member = members.FirstOrDefault(m => m.Id != memberId);
+            var member = members.FirstOrDefault(m => m.Id == memberId); // Виправлена умова пошуку
             if (member == null)
                 throw new Exception("Member not found.");
             members.Remove(member);
