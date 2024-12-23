@@ -1,6 +1,6 @@
 using System;
 using TDD._1;
-using Xunit;
+using xUnit;
 using TeamManagement;
 
 namespace TeamManagementTests
