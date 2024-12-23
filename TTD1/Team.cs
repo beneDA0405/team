@@ -28,8 +28,7 @@ namespace TeamManagement
 
         public List<TeamMember> GetAllMembers()
         {
-            // Помилка: повертається оригінальний список, а не копія
-            return members;
+            return new List<TeamMember>(members); // Повертається копія списку
         }
     }
 }
