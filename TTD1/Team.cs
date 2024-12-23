@@ -13,7 +13,8 @@ namespace TeamManagement
 
         public void AddTeamMember(TeamMember member)
         {
-            // Помилка: пропущена перевірка унікальності Id
+            if (members.Any(m => m.Id == member.Id)) // Додана перевірка унікальності Id
+                throw new Exception("Member with the same Id already exists.");
             members.Add(member);
         }
 
